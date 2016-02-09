@@ -33,8 +33,8 @@ public class SimpleTest {
 		System.out.println("Connecting plugins");
 		
 		System.out.println("Connecting: ");
-		System.out.println(plugin0.getName());
-		System.out.println(plugin1.getName());
+		System.out.println(plugin0.getLv2Uri());
+		System.out.println(plugin1.getLv2Uri());
 		
 		modHost.add(plugin0);
 		modHost.add(plugin1);
