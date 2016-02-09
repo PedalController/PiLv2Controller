@@ -4,14 +4,15 @@ import java.util.List;
 
 import br.com.srmourasilva.lv2library.Lv2Library;
 import br.com.srmourasilva.lv2library.Lv2Plugin;
+import br.com.srmourasilva.lv2library.MappingException;
 import br.com.srmourasilva.modhostbinding.Host;
 
 public class SimpleTest {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MappingException {
 		new SimpleTest();
 	}
 
-	public SimpleTest() {
+	public SimpleTest() throws MappingException {
 		// initializatation
 		System.out.println("Initialize jack mannualy");
 		System.out.println("Initialize mod-host mannualy");
@@ -21,6 +22,7 @@ public class SimpleTest {
 		
 		System.out.println("Scanning plugins");
 		Lv2Library myPlugins = Lv2Library.getInstance();
+		myPlugins.initializate();
 		
 		System.out.println("Getting plugins");
 		List<Lv2Plugin> plugins = myPlugins.getPlugins();
